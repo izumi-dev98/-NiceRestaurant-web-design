@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>NiceRestaurant</title>
-    <link rel="icon" href="/img/fork.png">
+    <link rel="icon" href="/img/fork.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -44,12 +44,16 @@
         height: 400px;
       } */
 
-      .swiper-button-prev{
+      .swiper-button-prev {
         color: black;
+        width: 28px;
+        height: 28px;
       }
 
-      .swiper-button-next{
+      .swiper-button-next {
         color: black;
+        width: 28px;
+        height: 28px;
       }
     </style>
   </head>
@@ -87,7 +91,7 @@
     <!-- Mobile Nav Menu -->
 
     <ul
-      class="fixed top-24 left-1/2 -translate-x-1/2 z-40 hidden xl:hidden bg-gray-700 font-bold self-center mx-auto items-center py-2 mt-2 w-[80%] h-84 rounded-xl overflow-auto text-center"
+      class="fixed top-24 left-1/2 -translate-x-1/2 z-40 hidden xl:hidden bg-gray-700 font-bold self-center mx-auto items-center py-2  mt-2 w-[97%] md:h-84 h-screen rounded-xl overflow-auto text-center"
       id="mobileMenu"
     >
       <li class="hover:text-text py-4">Home</li>
@@ -104,8 +108,12 @@
     <!-- Hero Section -->
 
     <section class="flex flex-col lg:flex-row xl:flex-row">
-      <div class="w-12/12 xl:px-26 lg:px-10 md:px-20 px-5 lg:mt-20 xl:mt-20 mt-10 flex flex-col gap-8">
-        <button class="border border-transparent py-1 px-8 w-60 rounded-full bg-text">
+      <div
+        class="w-12/12 xl:px-26 lg:px-10 md:px-20 px-5 lg:mt-20 xl:mt-20 mt-10 flex flex-col gap-8"
+      >
+        <button
+          class="border border-transparent py-1 px-8 w-60 rounded-full bg-text"
+        >
           Reservations Open
         </button>
         <h2 class="lg:text-6xl md:text-4xl font-bold font-font">
@@ -128,7 +136,9 @@
           >
             BOOK A TABLE
           </button>
-          <button class="border-1 border-white lg:py-4 lg:px-10 md:py-4 py-2 px-8 rounded-md">
+          <button
+            class="border-1 border-white lg:py-4 lg:px-10 md:py-4 py-2 px-8 rounded-md"
+          >
             EXPLORE OUR MENU
           </button>
         </div>
@@ -141,38 +151,41 @@
         </div>
       </div>
       <!-- Right Side -->
-      <div class="w-12/12 lg:mt-26 xl:mt-26 mt-0 order-first lg:order-last xl:order-last">
-        <div class="swiper xl:w-[600px] xl:h-[400px] lg:w-[500px] lg:h-[400px] md:h-[250px] md:w-full h-[200px] ">
+      <div
+        class="w-12/12 lg:mt-26 xl:mt-26 mt-0 order-first lg:order-last xl:order-last"
+      >
+        <div
+          class="swiper xl:w-[600px] xl:h-[400px] lg:w-[500px] lg:h-[400px] md:h-[250px] md:w-full h-[200px]"
+        >
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
               <img
                 src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/misc-square-3.webp"
-                alt="" class="w-full h-full object-cover"
+                alt=""
+                class="w-full h-full object-cover"
               />
             </div>
             <div class="swiper-slide">
               <img
                 src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/misc-square-2.webp"
-                alt="" class="w-full h-full object-cover"
+                alt=""
+                class="w-full h-full object-cover"
               />
             </div>
             <div class="swiper-slide">
               <img
                 src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/misc-square-1.webp"
-                alt="" class="w-full h-full object-cover"
+                alt=""
+                class="w-full h-full object-cover"
               />
             </div>
-            
           </div>
-         
 
           <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev "></div>
+          <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-
-          
         </div>
       </div>
     </section>
@@ -187,6 +200,13 @@
 
     menuBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
+
+      if (!mobileMenu.classList.contains("hidden")) {
+        document.body.style.overflow = "hidden";
+        
+      } else {
+        document.body.style.overflow = "";
+      }
     });
 
     const swiper = new Swiper(".swiper", {
@@ -194,15 +214,11 @@
       direction: "horizontal",
       loop: true,
 
-     
-
       // Navigation arrows
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-
-      
     });
   </script>
 </html>
