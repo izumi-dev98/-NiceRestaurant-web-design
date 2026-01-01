@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwsome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+        --color-mainText: #f4f7fa;
+        --color-text: #ceaf7f;
+        --color-hoverText: #816203;
+        --color-heading: #f4f7fa;
+        --font-font: "Libre Baskerville", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-mainText">
+    <!-- Nav Bar  -->
+    <nav
+      class="flex justify-between items-center px-6 py-4 md:px-12 md:py-6 lg-px-16 lg-py-8 xl:px-30 xl:py-10 w-full h-auto bg-gray-900"
+    >
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-utensils text-2xl text-text sm:text-3xl"></i>
+        <h1 class="font-font text-2xl sm:text-3xl">NiceRestaurant</h1>
+      </div>
+
+      <ul class="hidden xl:flex justify-center items-center gap-8">
+        <li class="hover:text-text">Home</li>
+        <li class="hover:text-text">About</li>
+        <li class="hover:text-text">Menu</li>
+        <li class="hover:text-text">Book a Table</li>
+        <li class="hover:text-text">Chefs</li>
+        <li class="hover:text-text">Events</li>
+        <li class="hover:text-text">Contact</li>
+      </ul>
+
+      <div class=" flex items-center gap-4">
+        <button
+          class="border border-transparent bg-text rounded-full px-6 py-2 hover:bg-hoverText sm:flex hidden"
+        >
+          Book a Table
+        </button>
+        <div class="xl:hidden">
+          <i class="fa-solid fa-bars text-3xl" id="menuBtn"></i>
+        </div>
+      </div>
+    </nav>
+    <!-- Mobile Nav Menu -->
+
+     <ul class=" hidden xl:hidden  bg-gray-700 font-bold self-center mx-auto  items-center  py-2  mt-2 w-[80%] h-84 rounded-xl overflow-auto text-center" id="mobileMenu">
+        <li class="hover:text-text py-4">Home</li>
+        <li class="hover:text-text py-4">About</li> 
+        <li class="hover:text-text py-4">Menu</li>
+        <li class="hover:text-text py-4">Book a Table</li>
+        <li class="hover:text-text py-4">Chefs</li>
+        <li class="hover:text-text py-4">Events</li>
+        <li class="hover:text-text py-4">Contact</li>
+      </ul>
+  </body>
+
+
+  <script>
+
+    const menuBtn = document.getElementById('menuBtn')
+    const mobileMenu = document.getElementById('mobileMenu')
+ 
+    menuBtn.addEventListener('click', ()=>{
+        mobileMenu.classList.toggle('hidden')
+        
+    })
+  </script>
+</html>
