@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>NiceRestaurant</title>
+    <link rel="icon" href="/img/fork.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,6 +21,12 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- Swipper Js  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
     <style type="text/tailwindcss">
       @theme {
         --color-clifford: #da373d;
@@ -27,6 +35,21 @@
         --color-hoverText: #816203;
         --color-heading: #f4f7fa;
         --font-font: "Libre Baskerville", sans-serif;
+      }
+    </style>
+
+    <style>
+      /* .swiper {
+        width: 400px;
+        height: 400px;
+      } */
+
+      .swiper-button-prev{
+        color: black;
+      }
+
+      .swiper-button-next{
+        color: black;
       }
     </style>
   </head>
@@ -50,7 +73,7 @@
         <li class="hover:text-text">Contact</li>
       </ul>
 
-      <div class=" flex items-center gap-4">
+      <div class="flex items-center gap-4">
         <button
           class="border border-transparent bg-text rounded-full px-6 py-2 hover:bg-hoverText sm:flex hidden"
         >
@@ -63,26 +86,123 @@
     </nav>
     <!-- Mobile Nav Menu -->
 
-     <ul class=" hidden xl:hidden  bg-gray-700 font-bold self-center mx-auto  items-center  py-2  mt-2 w-[80%] h-84 rounded-xl overflow-auto text-center" id="mobileMenu">
-        <li class="hover:text-text py-4">Home</li>
-        <li class="hover:text-text py-4">About</li> 
-        <li class="hover:text-text py-4">Menu</li>
-        <li class="hover:text-text py-4">Book a Table</li>
-        <li class="hover:text-text py-4">Chefs</li>
-        <li class="hover:text-text py-4">Events</li>
-        <li class="hover:text-text py-4">Contact</li>
-      </ul>
+    <ul
+      class="hidden xl:hidden bg-gray-700 font-bold self-center mx-auto items-center py-2 mt-2 w-[80%] h-84 rounded-xl overflow-auto text-center"
+      id="mobileMenu"
+    >
+      <li class="hover:text-text py-4">Home</li>
+      <li class="hover:text-text py-4">About</li>
+      <li class="hover:text-text py-4">Menu</li>
+      <li class="hover:text-text py-4">Book a Table</li>
+      <li class="hover:text-text py-4">Chefs</li>
+      <li class="hover:text-text py-4">Events</li>
+      <li class="hover:text-text py-4">Contact</li>
+    </ul>
+
+    <!-- Nav Bar  -->
+
+    <!-- Hero Section -->
+
+    <section class="flex flex-col lg:flex-row xl:flex-row">
+      <div class="w-12/12 xl:px-26 lg:px-10 md:px-20 px-5 lg:mt-20 xl:mt-20 mt-10 flex flex-col gap-8">
+        <button class="border border-transparent py-1 px-8 w-60 rounded-full bg-text">
+          Reservations Open
+        </button>
+        <h2 class="lg:text-6xl md:text-4xl font-bold font-font">
+          Savor the Moment, One Bite at a Time
+        </h2>
+        <span class="w-10/12"
+          >Discover a journey of flavors at our exquisite restaurant. Immerse
+          yourself in a delightful dining experience crafted with passion and
+          precision.</span
+        >
+
+        <div class="flex gap-2 items-center">
+          <i class="fa-regular fa-clock text-text"></i>
+          <span>Open Daily: 11am - 10pm</span>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-4">
+          <button
+            class="border border-transparent bg-text lg:py-4 lg:px-10 md:py-4 py-2 px-8 rounded-md"
+          >
+            BOOK A TABLE
+          </button>
+          <button class="border-1 border-white lg:py-4 lg:px-10 md:py-4 py-2 px-8 rounded-md">
+            EXPLORE OUR MENU
+          </button>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <i class="fa-brands fa-facebook text-3xl text-white"></i>
+          <i class="fa-brands fa-instagram text-3xl"></i>
+          <i class="fa-brands fa-x-twitter text-3xl"></i>
+          <i class="fa-brands fa-youtube text-3xl"></i>
+        </div>
+      </div>
+      <!-- Right Side -->
+      <div class="w-12/12 lg:mt-26 xl:mt-26 mt-0 order-first lg:order-last xl:order-last">
+        <div class="swiper xl:w-[600px] xl:h-[400px] lg:w-[500px] lg:h-[400px] md:h-[250px] md:w-full h-[200px] ">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/misc-square-3.webp"
+                alt="" class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/misc-square-2.webp"
+                alt="" class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/misc-square-1.webp"
+                alt="" class="w-full h-full object-cover"
+              />
+            </div>
+            
+          </div>
+         
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev "></div>
+          <div class="swiper-button-next"></div>
+
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Section -->
   </body>
-
-
+  <!-- Swipper js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-    const menuBtn = document.getElementById('menuBtn')
-    const mobileMenu = document.getElementById('mobileMenu')
- 
-    menuBtn.addEventListener('click', ()=>{
-        mobileMenu.classList.toggle('hidden')
-        
-    })
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    const swiper = new Swiper(".swiper", {
+      // Optional parameters
+      direction: "horizontal",
+      loop: true,
+
+     
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      
+    });
   </script>
 </html>
