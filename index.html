@@ -62,6 +62,10 @@
            after:w-[60px]
            after:bg-text;
         }
+
+        .active {
+          @apply bg-text;
+        }
       }
     </style>
 
@@ -368,22 +372,22 @@
       >
         <div class="flex flex-col items-center px-4 text-wrap">
           <h2 class="font-font text-4xl text-text">15+</h2>
-          <span class="md:text-sm text-[12px] italic">Years Experience</span>
+          <span class="md:text-sm text-[10px] italic">Years Experience</span>
         </div>
 
         <div class="flex flex-col items-center px-4 text-wrap">
           <h2 class="font-font text-4xl text-text">5</h2>
-          <span class="md:text-sm text-[12px] italic">Expert Chefs</span>
+          <span class="md:text-sm text-[10px] italic">Expert Chefs</span>
         </div>
 
         <div class="flex flex-col items-center px-4 text-wrap">
           <h2 class="font-font text-4xl text-text">3</h2>
-          <span class="md:text-sm text-[12px] italic">Culinary Awards</span>
+          <span class="md:text-sm text-[10px] italic">Culinary Awards</span>
         </div>
 
         <div class="flex flex-col items-center px-4 text-wrap">
           <h2 class="font-font text-4xl text-text">15000+</h2>
-          <span class="md:text-sm text-[12px] italic">Happy Customers</span>
+          <span class="md:text-sm text-[10px] italic">Happy Customers</span>
         </div>
       </div>
     </section>
@@ -409,11 +413,13 @@
         </button>
         <button
           class="h-auto w-auto px-4 py-1 bg-gray-600 rounded-full cursor-pointer hover:bg-text transition"
+          id="starters"
         >
           Starters
         </button>
         <button
           class="h-auto w-auto px-4 py-1 bg-gray-600 rounded-full cursor-pointer hover:bg-text transition"
+          id="mainCourses"
         >
           Main Courses
         </button>
@@ -429,86 +435,214 @@
         </button>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 items-center  gap-10 mt-10">
-        <div class="border-transparent rounded-lg bg-aboutbg px-6 py-6 flex flex-col md:flex-row gap-4">
-          <img src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/starter-2.webp" alt="" class="md:h-28 md:w-28 h-40 w-full rounded-lg object-cover">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 mt-10"
+        id="menua"
+      >
+        <div
+          class="border-transparent rounded-lg bg-aboutbg px-6 py-6 flex flex-col md:flex-row gap-4"
+        >
+          <img
+            src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/starter-2.webp"
+            alt=""
+            class="md:h-28 md:w-28 h-40 w-full rounded-lg object-cover"
+          />
           <div class="flex flex-col">
-            <h4 class="pb-2 font-font">Bruschetta Trio <span class="border bg-text text-sm px-2 rounded-full ms-2 text-black">Vegetarian</span></h4>
-            <span class="py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur sed.</span>
-            <span class=" text-text font-bold">$18.95</span>
+            <h4 class="pb-2 font-font">
+              Bruschetta Trio
+              <span
+                class="border bg-text text-sm px-2 rounded-full ms-2 text-black"
+                >Vegetarian</span
+              >
+            </h4>
+            <span class="py-2"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur
+              sed.</span
+            >
+            <span class="text-text font-bold">$18.95</span>
           </div>
         </div>
 
-        <div class="border-transparent rounded-lg bg-aboutbg px-6 py-6 flex flex-col md:flex-row gap-4">
-          <img src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/starter-5.webp" alt="" class="md:h-28 md:w-28 h-40 w-full rounded-lg object-cover">
+        <div
+          class="border-transparent rounded-lg bg-aboutbg px-6 py-6 flex flex-col md:flex-row gap-4"
+          id="menub"
+        >
+          <img
+            src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/starter-5.webp"
+            alt=""
+            class="md:h-28 md:w-28 h-40 w-full rounded-lg object-cover"
+          />
           <div class="flex flex-col">
-            <h4 class="pb-2 font-font">Calamari Fritti <span class="border bg-text text-sm px-2 rounded-full ms-2 text-black">Seafood</span></h4>
-            <span class="py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur sed.</span>
-            <span class=" text-text font-bold">$10.95</span>
+            <h4 class="pb-2 font-font">
+              Calamari Fritti
+              <span
+                class="border bg-text text-sm px-2 rounded-full ms-2 text-black"
+                >Seafood</span
+              >
+            </h4>
+            <span class="py-2"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur
+              sed.</span
+            >
+            <span class="text-text font-bold">$10.95</span>
           </div>
         </div>
 
-        <div class="border-transparent rounded-lg bg-aboutbg px-6 py-6 flex flex-col md:flex-row gap-4">
-          <img src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/main-1.webp" alt="" class="md:h-28 md:w-28 h-40 w-full rounded-lg object-cover">
+        <div
+          class="border-transparent rounded-lg bg-aboutbg px-6 py-6 flex flex-col md:flex-row gap-4"
+          id="menuc"
+        >
+          <img
+            src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/main-1.webp"
+            alt=""
+            class="md:h-28 md:w-28 h-40 w-full rounded-lg object-cover"
+          />
           <div class="flex flex-col">
-            <h4 class="pb-2 font-font">Wild Mushroom Risotto <span class="border bg-text text-sm px-2 rounded-full ms-2 text-black">Vegetarian</span></h4>
-            <span class="py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur sed.</span>
-            <span class=" text-text font-bold">$18.95</span>
+            <h4 class="pb-2 font-font">
+              Wild Mushroom Risotto
+              <span
+                class="border bg-text text-sm px-2 rounded-full ms-2 text-black"
+                >Vegetarian</span
+              >
+            </h4>
+            <span class="py-2"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur
+              sed.</span
+            >
+            <span class="text-text font-bold">$18.95</span>
           </div>
         </div>
 
-        <div class="border-transparent rounded-lg bg-aboutbg px-6 py-6 flex flex-col md:flex-row gap-4">
-          <img src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/main-4.webp" alt="" class="md:h-28 md:w-28 h-40 w-full rounded-lg object-cover">
+        <div
+          class="border-transparent rounded-lg bg-aboutbg px-6 py-6 flex flex-col md:flex-row gap-4"
+          id="menud"
+        >
+          <img
+            src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/main-4.webp"
+            alt=""
+            class="md:h-28 md:w-28 h-40 w-full rounded-lg object-cover"
+          />
           <div class="flex flex-col">
-            <h4 class="pb-2 font-font">Braised Lamb Shank <span class="border bg-text text-sm px-2 rounded-full ms-2 text-black">Chef's Choice</span></h4>
-            <span class="py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur sed.</span>
-            <span class=" text-text font-bold">$26.95</span>
+            <h4 class="pb-2 font-font">
+              Braised Lamb Shank
+              <span
+                class="border bg-text text-sm px-2 rounded-full ms-2 text-black"
+                >Chef's Choice</span
+              >
+            </h4>
+            <span class="py-2"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur
+              sed.</span
+            >
+            <span class="text-text font-bold">$26.95</span>
           </div>
         </div>
 
-        <div class="border-transparent rounded-lg bg-aboutbg px-6 py-6 flex flex-col md:flex-row gap-4">
-          <img src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/dessert-2.webp" alt="" class="md:h-28 md:w-28 h-40 w-full rounded-lg object-cover">
+        <div
+          class="border-transparent rounded-lg bg-aboutbg px-6 py-6 flex flex-col md:flex-row gap-4"
+          id="menue"
+        >
+          <img
+            src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/dessert-2.webp"
+            alt=""
+            class="md:h-28 md:w-28 h-40 w-full rounded-lg object-cover"
+          />
           <div class="flex flex-col">
-            <h4 class="pb-2 font-font">Chocolate Lava Cake<span class="border bg-text text-sm px-2 rounded-full ms-2 text-black">Gluten Free</span></h4>
-            <span class="py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur sed.</span>
-            <span class=" text-text font-bold">$9.95</span>
+            <h4 class="pb-2 font-font">
+              Chocolate Lava Cake<span
+                class="border bg-text text-sm px-2 rounded-full ms-2 text-black"
+                >Gluten Free</span
+              >
+            </h4>
+            <span class="py-2"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur
+              sed.</span
+            >
+            <span class="text-text font-bold">$9.95</span>
           </div>
         </div>
 
-        <div class="border-transparent rounded-lg bg-aboutbg px-6 py-6 flex flex-col md:flex-row gap-4">
-          <img src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/dessert-7.webp" alt="" class="md:h-28 md:w-28 h-40 w-full rounded-lg object-cover">
+        <div
+          class="border-transparent rounded-lg bg-aboutbg px-6 py-6 flex flex-col md:flex-row gap-4"
+          id="menuf"
+        >
+          <img
+            src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/dessert-7.webp"
+            alt=""
+            class="md:h-28 md:w-28 h-40 w-full rounded-lg object-cover"
+          />
           <div class="flex flex-col">
-            <h4 class="pb-2 font-font">Tiramisu<span class="border bg-text text-sm px-2 rounded-full ms-2 text-black">Classic</span></h4>
-            <span class="py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur sed.</span>
-            <span class=" text-text font-bold">$8.95</span>
+            <h4 class="pb-2 font-font">
+              Tiramisu<span
+                class="border bg-text text-sm px-2 rounded-full ms-2 text-black"
+                >Classic</span
+              >
+            </h4>
+            <span class="py-2"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur
+              sed.</span
+            >
+            <span class="text-text font-bold">$8.95</span>
           </div>
         </div>
 
-        <div class="border-transparent rounded-lg bg-aboutbg px-6 py-6 flex flex-col md:flex-row gap-4">
-          <img src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/drink-3.webp" alt="" class="md:h-28 md:w-28 h-40 w-full rounded-lg object-cover">
+        <div
+          class="border-transparent rounded-lg bg-aboutbg px-6 py-6 flex flex-col md:flex-row gap-4"
+          id="menug"
+        >
+          <img
+            src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/drink-3.webp"
+            alt=""
+            class="md:h-28 md:w-28 h-40 w-full rounded-lg object-cover"
+          />
           <div class="flex flex-col">
-            <h4 class="pb-2 font-font">Signature Cocktail<span class="border bg-text text-sm px-2 rounded-full ms-2 text-black">
-Alcoholic</span></h4>
-            <span class="py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur sed.</span>
-            <span class=" text-text font-bold">$12.95</span>
+            <h4 class="pb-2 font-font">
+              Signature Cocktail<span
+                class="border bg-text text-sm px-2 rounded-full ms-2 text-black"
+              >
+                Alcoholic</span
+              >
+            </h4>
+            <span class="py-2"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur
+              sed.</span
+            >
+            <span class="text-text font-bold">$12.95</span>
           </div>
         </div>
 
-        <div class="border-transparent rounded-lg bg-aboutbg px-6 py-6 flex flex-col md:flex-row gap-4">
-          <img src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/drink-8.webp" alt="" class="md:h-28 md:w-28 h-40 w-full rounded-lg object-cover">
+        <div
+          class="border-transparent rounded-lg bg-aboutbg px-6 py-6 flex flex-col md:flex-row gap-4"
+          id="menuh"
+        >
+          <img
+            src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/drink-8.webp"
+            alt=""
+            class="md:h-28 md:w-28 h-40 w-full rounded-lg object-cover"
+          />
           <div class="flex flex-col">
-            <h4 class="pb-2 font-font">Berry Smoothie<span class="border bg-text text-sm px-2 rounded-full ms-2 text-black">
-Non-Alcoholic</span></h4>
-            <span class="py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur sed.</span>
-            <span class=" text-text font-bold">$7.95</span>
+            <h4 class="pb-2 font-font">
+              Berry Smoothie<span
+                class="border bg-text text-sm px-2 rounded-full ms-2 text-black"
+              >
+                Non-Alcoholic</span
+              >
+            </h4>
+            <span class="py-2"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur
+              sed.</span
+            >
+            <span class="text-text font-bold">$7.95</span>
           </div>
         </div>
-
-        
       </div>
 
       <div class="flex justify-center items-center">
-        <button class="mt-16 h-12 rounded-xl w-auto px-8 py-1 border border-transparent bg-text text-black">Donwload Full Menu</button>
+        <button
+          class="mt-16 h-12 rounded-xl w-auto px-8 py-1 border border-transparent bg-text text-black"
+        >
+          Donwload Full Menu
+        </button>
       </div>
     </section>
     <!-- Menu Section -->
@@ -548,5 +682,8 @@ Non-Alcoholic</span></h4>
         prevEl: ".swiper-button-prev",
       },
     });
+
+
+
   </script>
 </html>
