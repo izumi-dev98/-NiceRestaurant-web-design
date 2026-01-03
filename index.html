@@ -92,7 +92,7 @@
       }
 
       section {
-        scroll-margin-top: 80px; /* height of navbar */
+        scroll-margin-top: 80px; 
       }
     </style>
   </head>
@@ -109,7 +109,7 @@
       <ul class="hidden xl:flex justify-center items-center gap-8">
         <a href="#home"> <li class="hover:text-text">Home</li></a>
         <a href="#about"> <li class="hover:text-text">About</li></a>
-        <li class="hover:text-text">Menu</li>
+         <a href="#menu"> <li class="hover:text-text py-4">menu</li></a>
         <li class="hover:text-text">Book a Table</li>
         <li class="hover:text-text">Chefs</li>
         <li class="hover:text-text">Events</li>
@@ -135,7 +135,7 @@
     >
       <a href="#home"> <li class="hover:text-text py-4">Home</li></a>
       <a href="#about"> <li class="hover:text-text py-4">About</li></a>
-      <li class="hover:text-text py-4">Menu</li>
+      <a href="#menu"> <li class="hover:text-text py-4">menu</li></a>
       <li class="hover:text-text py-4">Book a Table</li>
       <li class="hover:text-text py-4">Chefs</li>
       <li class="hover:text-text py-4">Events</li>
@@ -645,6 +645,57 @@
         </button>
       </div>
     </section>
+
+    <section class="mt-20 xl:px-26 lg:px-10 md:px-20 px-5">
+      <div
+        class="flex items-center gap-2 h-12 rounded-xl w-45 px-4 border border-transparent bg-text text-black"
+      >
+        <i class="fa-solid fa-award"></i>
+        <h2>Chef's Specials</h2>
+      </div>
+
+      <div class="flex flex-col lg:flex-row justify-between items-center gap-8 mt-10">
+        <div
+          class="flex flex-col gap-4 px-6 py-4 border border-transparent rounded-xl bg-aboutbg relative "
+        >
+          <img
+            src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/main-3.webp"
+            alt=""
+            class="h-[300px] w-full mx-auto rounded-lg object-cover"
+          />
+          <div class="flex items-center gap-4 absolute top-10 left-12   text-black">
+            <button class="border border-transparent bg-text px-4 py-1 rounded-2xl">Special </button>
+            <button class="border border-transparent bg-green-500 px-2 py-1 rounded-2xl">Vegan</button>
+          </div>
+          <h2 class="font-font">Mediterranean Grilled Salmon</h2>
+          <span class="text-sm italic"
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+            ut aliquam metus. Vivamus fermentum magna quis.</span
+          >
+          <span class="text-text font-bold">$24.99</span>
+        </div>
+
+        <div
+          class="flex flex-col gap-4 px-6 py-4 border border-transparent rounded-xl bg-aboutbg relative"
+        >
+          <img
+            src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/main-7.webp"
+            alt=""
+            class="h-[300px] w-full mx-auto rounded-lg object-cover"
+          />
+          <div class="flex items-center gap-4 absolute top-10 left-12   text-black">
+            <button class="border border-transparent bg-text px-4 py-1 rounded-2xl">Special </button>
+            <button class="border border-transparent bg-red-500 px-2 py-1 rounded-2xl">Spicy</button>
+          </div>
+          <h2 class="font-font">Mediterranean Grilled Salmon</h2>
+          <span class="text-sm italic"
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+            ut aliquam metus. Vivamus fermentum magna quis.</span
+          >
+          <span class="text-text font-bold">$32.99</span>
+        </div>
+      </div>
+    </section>
     <!-- Menu Section -->
   </body>
   <!-- Swipper js CDN -->
@@ -682,8 +733,5 @@
         prevEl: ".swiper-button-prev",
       },
     });
-
-
-
   </script>
 </html>
