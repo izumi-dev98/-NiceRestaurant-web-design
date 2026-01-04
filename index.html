@@ -75,6 +75,18 @@
         height: 400px;
       } */
 
+      /* pagination dots */
+      .swiper-pagination-bullet {
+        background: white;
+        opacity: 0.5;
+      }
+
+      /* active dot */
+      .swiper-pagination-bullet-active {
+        background: white;
+        opacity: 1;
+      }
+
       .swiper-button-prev {
         color: black;
         width: 28px;
@@ -92,7 +104,15 @@
       }
 
       section {
-        scroll-margin-top: 80px; 
+        scroll-margin-top: 80px;
+      }
+
+      .feedswiper {
+        padding-bottom: 70px;
+      }
+
+      .feedswiper .swiper-pagination {
+        bottom: 10px;
       }
     </style>
   </head>
@@ -109,7 +129,7 @@
       <ul class="hidden xl:flex justify-center items-center gap-8">
         <a href="#home"> <li class="hover:text-text">Home</li></a>
         <a href="#about"> <li class="hover:text-text">About</li></a>
-         <a href="#menu"> <li class="hover:text-text py-4">menu</li></a>
+        <a href="#menu"> <li class="hover:text-text py-4">menu</li></a>
         <li class="hover:text-text">Book a Table</li>
         <li class="hover:text-text">Chefs</li>
         <li class="hover:text-text">Events</li>
@@ -648,24 +668,36 @@
 
     <section class="mt-20 xl:px-26 lg:px-10 md:px-20 px-5">
       <div
-        class="flex items-center gap-2 h-12 rounded-xl w-45 px-4 border border-transparent bg-text text-black"
+        class="flex items-center gap-2 h-12 rounded-xl w-45 px-4 lg:mx-0 mx-auto border border-transparent bg-text text-black"
       >
         <i class="fa-solid fa-award"></i>
         <h2>Chef's Specials</h2>
       </div>
 
-      <div class="flex flex-col lg:flex-row justify-between items-center gap-8 mt-10">
+      <div
+        class="flex flex-col lg:flex-row justify-between items-center gap-8 mt-10"
+      >
         <div
-          class="flex flex-col gap-4 px-6 py-4 border border-transparent rounded-xl bg-aboutbg relative "
+          class="flex flex-col gap-4 px-6 py-4 border border-transparent rounded-xl bg-aboutbg relative"
         >
           <img
             src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/restaurant/main-3.webp"
             alt=""
             class="h-[300px] w-full mx-auto rounded-lg object-cover"
           />
-          <div class="flex items-center gap-4 absolute top-10 left-12   text-black">
-            <button class="border border-transparent bg-text px-4 py-1 rounded-2xl">Special </button>
-            <button class="border border-transparent bg-green-500 px-2 py-1 rounded-2xl">Vegan</button>
+          <div
+            class="flex items-center gap-4 absolute top-10 left-12 text-black"
+          >
+            <button
+              class="border border-transparent bg-text px-4 py-1 rounded-2xl"
+            >
+              Special
+            </button>
+            <button
+              class="border border-transparent bg-green-500 px-2 py-1 rounded-2xl"
+            >
+              Vegan
+            </button>
           </div>
           <h2 class="font-font">Mediterranean Grilled Salmon</h2>
           <span class="text-sm italic"
@@ -683,9 +715,19 @@
             alt=""
             class="h-[300px] w-full mx-auto rounded-lg object-cover"
           />
-          <div class="flex items-center gap-4 absolute top-10 left-12   text-black">
-            <button class="border border-transparent bg-text px-4 py-1 rounded-2xl">Special </button>
-            <button class="border border-transparent bg-red-500 px-2 py-1 rounded-2xl">Spicy</button>
+          <div
+            class="flex items-center gap-4 absolute top-10 left-12 text-black"
+          >
+            <button
+              class="border border-transparent bg-text px-4 py-1 rounded-2xl"
+            >
+              Special
+            </button>
+            <button
+              class="border border-transparent bg-red-500 px-2 py-1 rounded-2xl"
+            >
+              Spicy
+            </button>
           </div>
           <h2 class="font-font">Mediterranean Grilled Salmon</h2>
           <span class="text-sm italic"
@@ -697,6 +739,167 @@
       </div>
     </section>
     <!-- Menu Section -->
+
+    <!-- Feedback Section -->
+
+    <section class="mt-20 xl:px-26 lg:px-10 md:px-20 px-5">
+      <div class="flex flex-col items-center gap-4">
+        <h1 class="menuBefore menuAfter font-font text-3xl">Testimonials</h1>
+        <span class="text-center"
+          >Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+          consectetur velit</span
+        >
+      </div>
+
+      <div class="mt-20 xl:px-26 lg:px-10 md:px-20 px-5">
+        <div class="swiper feedswiper">
+          <div class="swiper-wrapper lg:py-4 lg:px-6 md:px-16 px-5">
+            <div class="swiper-slide">
+              <div
+                class="flex flex-col items-center border border-transparent rounded-lg bg-aboutbg gap-4 px-4 py-4 w-80"
+              >
+                <div class="flex flex-row items-center">
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                </div>
+                <span class="text-center"
+                  >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Ipsum, commodi nisi veritatis animi voluptatem sed asperiores
+                  unde quibusdam sequi totam voluptate laudantium quas dolorem
+                  accusantium, ducimus obcaecati at quisquam dolor.</span
+                >
+
+                <img
+                  src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/person/person-f-5.webp"
+                  alt=""
+                  class="h-20 w-20 rounded-full object-cover"
+                />
+                <h2 class="font-font font-bold">Sara Wilsson</h2>
+                <span class="text-sm">Desinger</span>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div
+                class="flex flex-col items-center border border-transparent rounded-lg bg-aboutbg gap-4 px-4 py-4 w-80"
+              >
+                <div class="flex flex-row items-center">
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                </div>
+                <span class="text-center"
+                  >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Ipsum, commodi nisi veritatis animi voluptatem sed asperiores
+                  unde quibusdam sequi totam voluptate laudantium quas dolorem
+                  accusantium, ducimus obcaecati at quisquam dolor.</span
+                >
+
+                <img
+                  src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/person/person-f-12.webp"
+                  alt=""
+                  class="h-20 w-20 rounded-full object-cover"
+                />
+                <h2 class="font-font font-bold">Jena Karlis</h2>
+                <span class="text-sm">Store Owner</span>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="flex flex-col items-center border border-transparent rounded-lg bg-aboutbg gap-4 px-4 py-4 w-80"
+              >
+                <div class="flex flex-row items-center">
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                </div>
+                <span class="text-center"
+                  >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Ipsum, commodi nisi veritatis animi voluptatem sed asperiores
+                  unde quibusdam sequi totam voluptate laudantium quas dolorem
+                  accusantium, ducimus obcaecati at quisquam dolor.</span
+                >
+
+                <img
+                  src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/person/person-m-9.webp"
+                  alt=""
+                  class="h-20 w-20 rounded-full object-cover"
+                />
+                <h2 class="font-font font-bold">Saul Goodman</h2>
+                <span class="text-sm">CEO & Founder</span>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div
+                class="flex flex-col items-center border border-transparent rounded-lg bg-aboutbg gap-4 px-4 py-4 w-80"
+              >
+                <div class="flex flex-row items-center">
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                </div>
+                <span class="text-center"
+                  >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Ipsum, commodi nisi veritatis animi voluptatem sed asperiores
+                  unde quibusdam sequi totam voluptate laudantium quas dolorem
+                  accusantium, ducimus obcaecati at quisquam dolor.</span
+                >
+
+                <img
+                  src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/person/person-m-13.webp"
+                  alt=""
+                  class="h-20 w-20 rounded-full object-cover"
+                />
+                <h2 class="font-font font-bold">John Larson</h2>
+                <span class="text-sm">Entreprener</span>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div
+                class="flex flex-col items-center border border-transparent rounded-lg bg-aboutbg gap-4 px-4 py-4 w-80"
+              >
+                <div class="flex flex-row items-center">
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                  <i class="fa-solid fa-star text-orange-400"></i>
+                </div>
+                <span class="text-center"
+                  >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Ipsum, commodi nisi veritatis animi voluptatem sed asperiores
+                  unde quibusdam sequi totam voluptate laudantium quas dolorem
+                  accusantium, ducimus obcaecati at quisquam dolor.</span
+                >
+
+                <img
+                  src="https://bootstrapmade.com/content/demo/NiceRestaurant/assets/img/person/person-m-12.webp"
+                  alt=""
+                  class="h-20 w-20 rounded-full object-cover"
+                />
+                <h2 class="font-font font-bold">Matt Brondon</h2>
+                <span class="text-sm">FreeLancer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination mt-10"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback Section -->
   </body>
   <!-- Swipper js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
@@ -731,6 +934,31 @@
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+      },
+    });
+
+    const swiperFeed = new Swiper(".feedswiper", {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 100,
+
+      autoplay: {
+        delay: 3000, // 3 seconds
+        disableOnInteraction: false,
+      },
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+      breakpoints: {
+        600: {
+          slidesPerView: 1,
+          spaceBetween: 100,
+        },
+
+        1024: { slidesPerView: 3, spaceBetween: 200 },
       },
     });
   </script>
